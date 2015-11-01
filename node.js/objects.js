@@ -1,11 +1,16 @@
-var die = {
-	size: 5,
-	count: 1,
-	roll: function(dieSize){
-		var result = Math.ceil (dieSize * Math.random());
-		return result;
-	}
-};
+var dice = require("./dice");
+var die = dice.die;
 
+die.size = 6;
+
+console.log(die.roll());
+//die.totalRolls = die.totalRolls + 1;
+
+console.log(die.roll());
+//die.totalRolls = die.totalRolls + 1;
+
+console.log(die.roll());
+//die.totalRolls = die.totalRolls + 1;
+
+console.log("Total Rolls: " + die.totalRolls);
 console.log(die);
-console.log(die.roll(6));
